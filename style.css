@@ -1,14 +1,22 @@
 div{margin:0;border:0;padding:0;}
+
+body
+{
+    margin: 0;
+    background-image: url("background_main.png");
+    background-size: cover;
+    height: 100%;
+}
 .homepage_background
 {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom ,white, pink);
     padding-top: 200px;
     font-size: 0;
-    overflow: scroll;
+    overflow: hidden;
     scroll-behavior: smooth;
+    backdrop-filter: blur(10px);
 }
 
 .head_container
@@ -16,6 +24,8 @@ div{margin:0;border:0;padding:0;}
     width: 100%;
     height:300px;
     text-align: center;
+    transition-duration: 1s;
+    -webkit-transition-duration: 1s;
 }
 #head
 {
@@ -24,7 +34,13 @@ div{margin:0;border:0;padding:0;}
     border-radius: 50%;
     pointer-events: none;
     user-select: none;
+    box-shadow: 0 0 10px white;
 }
+.head_container:hover
+{
+    transform: scale(1.05);
+}
+
 
 .introduction
 {
@@ -44,6 +60,9 @@ div{margin:0;border:0;padding:0;}
     font-size: 100px;
     font-family: Gabriola;
     user-select: none;
+    color: white;
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
 }
 #note
 {
@@ -52,6 +71,13 @@ div{margin:0;border:0;padding:0;}
     font-size: 25px;
     font-family: Gabriola;
     user-select: none;
+    color: ghostwhite;
+    transition-duration: 0.4s;
+    -webkit-transition-duration: 0.4s;
+}
+#name:hover , #note:hover
+{
+    transform: scale(1.1);
 }
 .relative_elements
 {
@@ -63,31 +89,28 @@ div{margin:0;border:0;padding:0;}
     margin: 0;
     height: 100%;
     display: flex;
-    gap: 100px;
+    gap: 150px;
     list-style-type: none;
     justify-content: center;
     text-align: center;
-    font-size: 100px;
+    font-size: 75px;
 }
 
-.button_1
+.icon
 {
-
-    background-color: transparent;
+    font-family: FontAwesome;
     margin-top: 20px;
     margin-bottom: 20px;
-    height: 100px;
-    width: 100px;
-    border-radius: 10px;
-    border: 2px solid white;
-    box-shadow: 2px 2px 2px lightpink;
-    backdrop-filter: blur(5px);
+    height: 75px;
+    width:75px;
     transition-duration: 0.4s;
     -webkit-transition-duration: 0.4s;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    color: white;
 }
-
-.button_1:hover
+.icon:hover
 {
-    box-shadow: 0 12px 16px 0 lightpink,
-    0 17px 50px 0 floralwhite;
+    transform: scale(1.1);
 }
